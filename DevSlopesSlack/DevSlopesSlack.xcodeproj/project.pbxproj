@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BEBEFBC230398FA00680616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBEFBB230398FA00680616 /* AppDelegate.swift */; };
+		2BEBEFC0230398FC00680616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BEBEFBF230398FC00680616 /* Assets.xcassets */; };
+		2BEBEFC3230398FC00680616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BEBEFC1230398FC00680616 /* Main.storyboard */; };
+		2BEBF04D2303D32700680616 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBF04C2303D32700680616 /* ChatViewController.swift */; };
+		2BEBF04F2303D33800680616 /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBF04E2303D33800680616 /* ToolbarViewController.swift */; };
+		2BEBF0522303D34200680616 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBF0502303D34200680616 /* ChannelViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BEBEFB8230398FA00680616 /* DevSlopesSlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevSlopesSlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BEBEFBB230398FA00680616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BEBEFBF230398FC00680616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BEBEFC2230398FC00680616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BEBEFC4230398FC00680616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BEBEFC5230398FC00680616 /* DevSlopesSlack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DevSlopesSlack.entitlements; sourceTree = "<group>"; };
+		2BEBF04C2303D32700680616 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		2BEBF04E2303D33800680616 /* ToolbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
+		2BEBF0502303D34200680616 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BEBEFB5230398FA00680616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BEBEFAF230398FA00680616 = {
+			isa = PBXGroup;
+			children = (
+				2BEBEFBA230398FA00680616 /* DevSlopesSlack */,
+				2BEBEFB9230398FA00680616 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BEBEFB9230398FA00680616 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BEBEFB8230398FA00680616 /* DevSlopesSlack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BEBEFBA230398FA00680616 /* DevSlopesSlack */ = {
+			isa = PBXGroup;
+			children = (
+				2BEBF04B2303D2C600680616 /* view */,
+				2BEBF04A2303D2BF00680616 /* controller */,
+				2BEBEFBB230398FA00680616 /* AppDelegate.swift */,
+				2BEBEFBF230398FC00680616 /* Assets.xcassets */,
+				2BEBEFC1230398FC00680616 /* Main.storyboard */,
+				2BEBEFC4230398FC00680616 /* Info.plist */,
+				2BEBEFC5230398FC00680616 /* DevSlopesSlack.entitlements */,
+			);
+			path = DevSlopesSlack;
+			sourceTree = "<group>";
+		};
+		2BEBF04A2303D2BF00680616 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				2BEBF04C2303D32700680616 /* ChatViewController.swift */,
+				2BEBF04E2303D33800680616 /* ToolbarViewController.swift */,
+				2BEBF0502303D34200680616 /* ChannelViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		2BEBF04B2303D2C600680616 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BEBEFB7230398FA00680616 /* DevSlopesSlack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BEBEFC8230398FC00680616 /* Build configuration list for PBXNativeTarget "DevSlopesSlack" */;
+			buildPhases = (
+				2BEBEFB4230398FA00680616 /* Sources */,
+				2BEBEFB5230398FA00680616 /* Frameworks */,
+				2BEBEFB6230398FA00680616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DevSlopesSlack;
+			productName = DevSlopesSlack;
+			productReference = 2BEBEFB8230398FA00680616 /* DevSlopesSlack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BEBEFB0230398FA00680616 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Buck;
+				TargetAttributes = {
+					2BEBEFB7230398FA00680616 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 2BEBEFB3230398FA00680616 /* Build configuration list for PBXProject "DevSlopesSlack" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BEBEFAF230398FA00680616;
+			productRefGroup = 2BEBEFB9230398FA00680616 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BEBEFB7230398FA00680616 /* DevSlopesSlack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BEBEFB6230398FA00680616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BEBEFC0230398FC00680616 /* Assets.xcassets in Resources */,
+				2BEBEFC3230398FC00680616 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BEBEFB4230398FA00680616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BEBF04F2303D33800680616 /* ToolbarViewController.swift in Sources */,
+				2BEBF04D2303D32700680616 /* ChatViewController.swift in Sources */,
+				2BEBF0522303D34200680616 /* ChannelViewController.swift in Sources */,
+				2BEBEFBC230398FA00680616 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2BEBEFC1230398FC00680616 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BEBEFC2230398FC00680616 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BEBEFC6230398FC00680616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BEBEFC7230398FC00680616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2BEBEFC9230398FC00680616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DevSlopesSlack/DevSlopesSlack.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AM292KQK2W;
+				INFOPLIST_FILE = DevSlopesSlack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macostutorial.buck.DevSlopesSlack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2BEBEFCA230398FC00680616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DevSlopesSlack/DevSlopesSlack.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AM292KQK2W;
+				INFOPLIST_FILE = DevSlopesSlack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.macostutorial.buck.DevSlopesSlack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BEBEFB3230398FA00680616 /* Build configuration list for PBXProject "DevSlopesSlack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BEBEFC6230398FC00680616 /* Debug */,
+				2BEBEFC7230398FC00680616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BEBEFC8230398FC00680616 /* Build configuration list for PBXNativeTarget "DevSlopesSlack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BEBEFC9230398FC00680616 /* Debug */,
+				2BEBEFCA230398FC00680616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BEBEFB0230398FA00680616 /* Project object */;
+}
