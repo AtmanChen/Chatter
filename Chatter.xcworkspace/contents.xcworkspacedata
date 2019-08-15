@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/bake/Desktop/Chatter/Model/SlackCore.xcodeproj">
+      location = "group:SlackCore/SlackCore.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:DevSlopesSlack/DevSlopesSlack.xcodeproj">

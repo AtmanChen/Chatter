@@ -12,7 +12,10 @@ class ChannelViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        view.wantsLayer = true
+        view.layer?.backgroundColor = GeneralColor.purple.cgColor
+
     }
     
 }

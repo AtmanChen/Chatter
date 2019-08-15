@@ -683,7 +683,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="DevSlopesSlack" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -715,12 +715,32 @@
                                     <segue destination="Uj9-P7-hjD" kind="embed" id="CcV-zZ-JhH"/>
                                 </connections>
                             </containerView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PFe-un-6PP">
+                                <rect key="frame" x="436" y="236" width="38" height="23"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Login" id="jIj-PQ-Mee">
+                                    <font key="font" size="13" name="AvenirNext-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Pf-X0-fto">
+                                <rect key="frame" x="406" y="236" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="7XT-Rc-5AB"/>
+                                    <constraint firstAttribute="height" constant="24" id="bgm-Mo-bNO"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="profileDefault" id="9yG-5x-NTc"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ws2-ZO-F3U" secondAttribute="trailing" id="9pG-Ev-Onw"/>
                             <constraint firstItem="ws2-ZO-F3U" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Lwy-9g-8d1"/>
+                            <constraint firstItem="4Pf-X0-fto" firstAttribute="bottom" secondItem="PFe-un-6PP" secondAttribute="bottom" id="Zyz-xm-DQb"/>
                             <constraint firstAttribute="bottom" secondItem="ws2-ZO-F3U" secondAttribute="bottom" id="glb-j9-Nlh"/>
                             <constraint firstItem="ws2-ZO-F3U" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="50" id="m4P-dM-uiV"/>
+                            <constraint firstAttribute="trailing" secondItem="PFe-un-6PP" secondAttribute="trailing" constant="8" id="qDZ-ja-A5B"/>
+                            <constraint firstItem="ws2-ZO-F3U" firstAttribute="top" secondItem="PFe-un-6PP" secondAttribute="bottom" constant="16" id="qZR-Oe-P22"/>
+                            <constraint firstItem="PFe-un-6PP" firstAttribute="leading" secondItem="4Pf-X0-fto" secondAttribute="trailing" constant="8" id="svl-WI-5Yc"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -780,4 +800,7 @@
             <point key="canvasLocation" x="730" y="1220"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profileDefault" width="100" height="100"/>
+    </resources>
 </document>
