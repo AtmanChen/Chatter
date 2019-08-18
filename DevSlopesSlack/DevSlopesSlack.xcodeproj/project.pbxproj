@@ -15,6 +15,12 @@
 		2BEBF0522303D34200680616 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBF0502303D34200680616 /* ChannelViewController.swift */; };
 		2BEBF0862304E80B00680616 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBF0852304E80B00680616 /* Constants.swift */; };
 		2BEBF0882304E8BC00680616 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEBF0872304E8BC00680616 /* MainWindowController.swift */; };
+		CFD4E36423078B8700B5E7C0 /* UI+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E36323078B8700B5E7C0 /* UI+Ex.swift */; };
+		CFD4E36B23079BAC00B5E7C0 /* ModelBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E36A23079BAC00B5E7C0 /* ModelBackgroundView.swift */; };
+		CFD4E36F23079F5F00B5E7C0 /* ModalLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E36E23079F5F00B5E7C0 /* ModalLogin.swift */; };
+		CFD4E3772307A65D00B5E7C0 /* CAAnimationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E3762307A65D00B5E7C0 /* CAAnimationUtils.swift */; };
+		CFD4E3792307A6CC00B5E7C0 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E3782307A6CB00B5E7C0 /* UIUtils.swift */; };
+		CFFA009D2308FA5F004B071B /* ModalLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFA009C2308FA5F004B071B /* ModalLogin.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,12 @@
 		2BEBF0502303D34200680616 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		2BEBF0852304E80B00680616 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2BEBF0872304E8BC00680616 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		CFD4E36323078B8700B5E7C0 /* UI+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Ex.swift"; sourceTree = "<group>"; };
+		CFD4E36A23079BAC00B5E7C0 /* ModelBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackgroundView.swift; sourceTree = "<group>"; };
+		CFD4E36E23079F5F00B5E7C0 /* ModalLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLogin.swift; sourceTree = "<group>"; };
+		CFD4E3762307A65D00B5E7C0 /* CAAnimationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAAnimationUtils.swift; sourceTree = "<group>"; };
+		CFD4E3782307A6CB00B5E7C0 /* UIUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		CFFA009C2308FA5F004B071B /* ModalLogin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalLogin.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +73,8 @@
 		2BEBEFBA230398FA00680616 /* DevSlopesSlack */ = {
 			isa = PBXGroup;
 			children = (
+				CFD4E36723079B8800B5E7C0 /* views */,
 				2BEBF0842304E7FD00680616 /* utils */,
-				2BEBF04B2303D2C600680616 /* view */,
 				2BEBF04A2303D2BF00680616 /* controller */,
 				2BEBEFBB230398FA00680616 /* AppDelegate.swift */,
 				2BEBEFBF230398FC00680616 /* Assets.xcassets */,
@@ -84,19 +96,25 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
-		2BEBF04B2303D2C600680616 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		2BEBF0842304E7FD00680616 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				CFD4E3782307A6CB00B5E7C0 /* UIUtils.swift */,
+				CFD4E3762307A65D00B5E7C0 /* CAAnimationUtils.swift */,
 				2BEBF0852304E80B00680616 /* Constants.swift */,
+				CFD4E36323078B8700B5E7C0 /* UI+Ex.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		CFD4E36723079B8800B5E7C0 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CFD4E36A23079BAC00B5E7C0 /* ModelBackgroundView.swift */,
+				CFD4E36E23079F5F00B5E7C0 /* ModalLogin.swift */,
+				CFFA009C2308FA5F004B071B /* ModalLogin.xib */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BEBEFC0230398FC00680616 /* Assets.xcassets in Resources */,
+				CFFA009D2308FA5F004B071B /* ModalLogin.xib in Resources */,
 				2BEBEFC3230398FC00680616 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,11 +188,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFD4E36B23079BAC00B5E7C0 /* ModelBackgroundView.swift in Sources */,
+				CFD4E36F23079F5F00B5E7C0 /* ModalLogin.swift in Sources */,
 				2BEBF0862304E80B00680616 /* Constants.swift in Sources */,
 				2BEBF04F2303D33800680616 /* ToolbarViewController.swift in Sources */,
 				2BEBF0882304E8BC00680616 /* MainWindowController.swift in Sources */,
+				CFD4E3792307A6CC00B5E7C0 /* UIUtils.swift in Sources */,
 				2BEBF04D2303D32700680616 /* ChatViewController.swift in Sources */,
 				2BEBF0522303D34200680616 /* ChannelViewController.swift in Sources */,
+				CFD4E36423078B8700B5E7C0 /* UI+Ex.swift in Sources */,
+				CFD4E3772307A65D00B5E7C0 /* CAAnimationUtils.swift in Sources */,
 				2BEBEFBC230398FA00680616 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,9 +336,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DevSlopesSlack/DevSlopesSlack.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = AM292KQK2W;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DevSlopesSlack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,9 +356,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DevSlopesSlack/DevSlopesSlack.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = AM292KQK2W;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DevSlopesSlack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
