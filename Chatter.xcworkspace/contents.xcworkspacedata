@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Signals/SSignalKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TGUIKit/TGUIKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:SlackCore/SlackCore.xcodeproj">
    </FileRef>
    <FileRef
