@@ -1238,7 +1238,7 @@ revealAction_inactive_foreground: .white
 
 private var _theme:Atomic<PresentationTheme> = Atomic(value: whiteTheme)
 
-public let whiteTheme = PresentationTheme(colors: whitePalette, search: SearchTheme(.grayBackground, #imageLiteral(resourceName: "Icon_SearchField").precomposed(), #imageLiteral(resourceName: "Icon_SearchClear").precomposed(), {localizedString("SearchField.Search")}, .text, .grayText))
+public let whiteTheme = PresentationTheme(colors: nightBluePalette, search: SearchTheme(.grayBackground, #imageLiteral(resourceName: "light1").precomposed(), #imageLiteral(resourceName: "dark1").precomposed(), {localizedString("SearchField.Search")}, .text, .grayText))
 
 
 

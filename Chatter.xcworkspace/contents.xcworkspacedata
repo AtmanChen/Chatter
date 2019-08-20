@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TGSlopesSlack/TGSlopesSlack.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Signals/SSignalKit.xcodeproj">
    </FileRef>
    <FileRef

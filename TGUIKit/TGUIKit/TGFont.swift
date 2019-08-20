@@ -14,7 +14,7 @@ public func systemFont(_ size:CGFloat) ->NSFont {
     if #available(OSX 10.11, *) {
         return NSFont.systemFont(ofSize: size, weight: NSFont.Weight.regular)
     } else {
-        return NSFont.init(name: "HelveticaNeue", size: size)!
+        return NSFont.init(name: "AvenirNext", size: size)!
     }
 }
 
@@ -23,7 +23,7 @@ public func systemMediumFont(_ size:CGFloat) ->NSFont {
     if #available(OSX 10.11, *) {
         return NSFont.systemFont(ofSize: size, weight: NSFont.Weight.semibold)
     } else {
-        return NSFont.init(name: "HelveticaNeue-Medium", size: size)!
+        return NSFont.init(name: "AvenirNext-Medium", size: size)!
     }
     
 }
@@ -33,7 +33,7 @@ public func systemBoldFont(_ size:CGFloat) ->NSFont {
     if #available(OSX 10.11, *) {
         return NSFont.systemFont(ofSize: size, weight: NSFont.Weight.bold)
     } else {
-        return NSFont.init(name: "HelveticaNeue-Bold", size: size)!
+        return NSFont.init(name: "AvenirNext-Bold", size: size)!
     }
 }
 
@@ -43,7 +43,7 @@ public extension NSFont {
         if #available(OSX 10.11, *) {
             return NSFont.systemFont(ofSize: size, weight: NSFont.Weight.regular)
         } else {
-            return NSFont(name: "HelveticaNeue", size: size)!
+            return NSFont(name: "AvenirNext-Regular", size: size)!
         }
     }
     
@@ -65,7 +65,7 @@ public extension NSFont {
         if #available(OSX 10.11, *) {
             return NSFont.systemFont(ofSize: size, weight: NSFont.Weight.semibold)
         } else {
-            return NSFont(name: "HelveticaNeue-Medium", size: size)!
+            return NSFont(name: "AvenirNext-Medium", size: size)!
         }
         
     }
@@ -75,7 +75,7 @@ public extension NSFont {
         if #available(OSX 10.11, *) {
             return NSFont.systemFont(ofSize: size, weight: NSFont.Weight.bold)
         } else {
-            return NSFont(name: "HelveticaNeue-Bold", size: size)!
+            return NSFont(name: "AvenirNext-Bold", size: size)!
         }
     }
     

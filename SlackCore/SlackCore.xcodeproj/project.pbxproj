@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B269858230BD79E00CDE3AC /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B269857230BD79E00CDE3AC /* Account.swift */; };
 		2BEBEFDC23039ADF00680616 /* SlackCore_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BEBEFDA23039ADF00680616 /* SlackCore_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BEBEFE923039AFB00680616 /* SlackCore_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BEBEFE723039AFB00680616 /* SlackCore_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B269857230BD79E00CDE3AC /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		2BEBEFD723039ADF00680616 /* SlackCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlackCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEBEFDA23039ADF00680616 /* SlackCore_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlackCore_macOS.h; sourceTree = "<group>"; };
 		2BEBEFDB23039ADF00680616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,10 +40,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B269856230BD79700CDE3AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B269857230BD79E00CDE3AC /* Account.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2BEBEFCB23039AC200680616 = {
 			isa = PBXGroup;
 			children = (
-				2BEBEFED23039B2200680616 /* Models */,
+				2B269856230BD79700CDE3AC /* Model */,
 				2BEBEFD923039ADF00680616 /* SlackCore-macOS */,
 				2BEBEFE623039AFB00680616 /* SlackCore-iOS */,
 				2BEBEFD823039ADF00680616 /* Products */,
@@ -73,13 +83,6 @@
 				2BEBEFE823039AFB00680616 /* Info.plist */,
 			);
 			path = "SlackCore-iOS";
-			sourceTree = "<group>";
-		};
-		2BEBEFED23039B2200680616 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +153,7 @@
 				TargetAttributes = {
 					2BEBEFD623039ADF00680616 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					2BEBEFE423039AFB00680616 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -197,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B269858230BD79E00CDE3AC /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

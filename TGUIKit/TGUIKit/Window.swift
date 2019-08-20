@@ -807,9 +807,6 @@ open class Window: NSWindow {
         
         self.acceptsMouseMovedEvents = true
         
-       
-        
-        
         self.contentView?.acceptsTouchEvents = true
         NotificationCenter.default.addObserver(self, selector: #selector(windowDidNeedSaveState(_:)), name: NSWindow.didMoveNotification, object: self)
         NotificationCenter.default.addObserver(self, selector: #selector(windowDidNeedSaveState(_:)), name: NSWindow.didResizeNotification, object: self)
