@@ -9,16 +9,10 @@
 import Cocoa
 import TGUIKit
 
-class ChannelViewController: ViewController {
-    
-    override init() {
-        super.init()
-        readyOnce()
-    }
+class ChannelViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        bar = .init(height: 44)
+       
     }
 }

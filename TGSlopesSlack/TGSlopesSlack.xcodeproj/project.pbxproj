@@ -14,12 +14,9 @@
 		2B269845230BC96400CDE3AC /* SwiftSignalKitMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B269844230BC96400CDE3AC /* SwiftSignalKitMac.framework */; };
 		2B269847230BC96400CDE3AC /* TGUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B269846230BC96400CDE3AC /* TGUIKit.framework */; };
 		2B269849230BCC7300CDE3AC /* ToolBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B269848230BCC7300CDE3AC /* ToolBarViewController.swift */; };
-		2B26984C230BCEC700CDE3AC /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26984B230BCEC700CDE3AC /* ApplicationContext.swift */; };
 		2B26984E230BD4F200CDE3AC /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26984D230BD4F200CDE3AC /* ChannelViewController.swift */; };
 		2B269850230BD50700CDE3AC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26984F230BD50700CDE3AC /* ChatViewController.swift */; };
-		2B269853230BD6B000CDE3AC /* ChatNavigationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B269852230BD6B000CDE3AC /* ChatNavigationHeaderView.swift */; };
 		2B26985A230BD7E100CDE3AC /* SlackCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B269859230BD7E100CDE3AC /* SlackCore.framework */; };
-		2B269866230BE37B00CDE3AC /* PlainNavigationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B269865230BE37B00CDE3AC /* PlainNavigationHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +30,9 @@
 		2B269844230BC96400CDE3AC /* SwiftSignalKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSignalKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B269846230BC96400CDE3AC /* TGUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TGUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B269848230BCC7300CDE3AC /* ToolBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarViewController.swift; sourceTree = "<group>"; };
-		2B26984B230BCEC700CDE3AC /* ApplicationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		2B26984D230BD4F200CDE3AC /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		2B26984F230BD50700CDE3AC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		2B269852230BD6B000CDE3AC /* ChatNavigationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavigationHeaderView.swift; sourceTree = "<group>"; };
 		2B269859230BD7E100CDE3AC /* SlackCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlackCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B269865230BE37B00CDE3AC /* PlainNavigationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainNavigationHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +105,6 @@
 		2B26984A230BCEB800CDE3AC /* context */ = {
 			isa = PBXGroup;
 			children = (
-				2B26984B230BCEC700CDE3AC /* ApplicationContext.swift */,
 			);
 			path = context;
 			sourceTree = "<group>";
@@ -119,8 +112,6 @@
 		2B269851230BD68E00CDE3AC /* view */ = {
 			isa = PBXGroup;
 			children = (
-				2B269852230BD6B000CDE3AC /* ChatNavigationHeaderView.swift */,
-				2B269865230BE37B00CDE3AC /* PlainNavigationHeaderView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -195,11 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B26984C230BCEC700CDE3AC /* ApplicationContext.swift in Sources */,
 				2B269849230BCC7300CDE3AC /* ToolBarViewController.swift in Sources */,
-				2B269866230BE37B00CDE3AC /* PlainNavigationHeaderView.swift in Sources */,
 				2B26983A230BC83200CDE3AC /* MainWindowController.swift in Sources */,
-				2B269853230BD6B000CDE3AC /* ChatNavigationHeaderView.swift in Sources */,
 				2B26982A230BC7F300CDE3AC /* AppDelegate.swift in Sources */,
 				2B269850230BD50700CDE3AC /* ChatViewController.swift in Sources */,
 				2B26984E230BD4F200CDE3AC /* ChannelViewController.swift in Sources */,

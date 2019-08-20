@@ -11,6 +11,9 @@ import TGUIKit
 
 class ChatViewController: ViewController {
     
+    private let topContainerView = View()
+    private let profileButton = TitleButton()
+    
     override init() {
         super.init()
         readyOnce()
@@ -18,5 +21,11 @@ class ChatViewController: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        topContainerView.backgroundColor = .white
+    }
+    
+    override func loadView() {
+        super.loadView()
+        addSubview(topContainerView)
     }
 }

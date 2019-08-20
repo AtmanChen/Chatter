@@ -9,11 +9,11 @@
 import Cocoa
 import TGUIKit
 
-class ToolBarViewController: ViewController {
+class ToolBarViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.background = nightBluePalette.background
     }
     
 }

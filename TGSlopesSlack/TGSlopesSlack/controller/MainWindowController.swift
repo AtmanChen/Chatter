@@ -13,6 +13,10 @@ class MainWindowController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
         
+        window?.titlebarAppearsTransparent = true
+        window?.titleVisibility = .hidden
+        
+        contentViewController = ToolBarViewController()
     }
     
 }

@@ -16,6 +16,7 @@ class MainWindowController: NSWindowController {
         window?.titlebarAppearsTransparent = true
         window?.titleVisibility = .hidden
         
+        
     }
 
 }
