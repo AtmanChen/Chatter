@@ -8,6 +8,11 @@
 
 import Cocoa
 
+protocol ModalViewDelegate: class {
+    func dismissModal()
+    func actionCreateAccount()
+}
+
 class ModalLogin: NSView {
     
     
@@ -18,12 +23,12 @@ class ModalLogin: NSView {
     @IBOutlet weak var loginButton: NSButton!
     @IBOutlet weak var createAccountButton: NSButton!
     
+    weak var delegate: ModalViewDelegate?
+    
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         Bundle.main.loadNibNamed("ModalLogin", owner: self, topLevelObjects: nil)
         addSubview(view)
-        
-        
     }
     
     required init?(coder: NSCoder) {
@@ -48,10 +53,21 @@ class ModalLogin: NSView {
     }
     
     @IBAction func actionLogin(_ sender: Any) {
+        
     }
+    
     @IBAction func actionCloseLogin(_ sender: Any) {
+        guard let delegate = delegate else {
+            return
+        }
+        delegate.dismissModal()
     }
+    
     @IBAction func actionCreateAccount(_ sender: Any) {
+        guard let delegate = delegate else {
+            return
+        }
+        delegate.actionCreateAccount()
     }
     
 }

@@ -7,34 +7,36 @@
 //
 
 import Cocoa
-import TGUIKit
-import SwiftSignalKitMac
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: Window!
+    lazy var window: NSWindow = {
+        let w = NSWindow(contentRect: NSMakeRect(0, 0, 640, 480),
+                         styleMask: [.titled, .resizable, .miniaturizable, .closable, .fullSizeContentView],
+                         backing: .buffered,
+                         defer: false)
+        
+        // 设置最小尺寸
+        w.minSize = NSMakeSize(320, 240)
+        
+        // 打开显示在屏幕的中心位置
+        w.center()
+        
+        return w
+    }()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        UserDefaults.standard.set(true, forKey: "NSConstraintBasedLayoutVisualizeMutuallyExclusiveConstraints")
         launchInterface()
     }
     
     private func launchInterface() {
-        
-//        self.context.set(.single(ApplicationContext(window: window)))
-//        _ = (self.context.get() |> deliverOnMainQueue).start(next: { context in
-//            assert(Queue.mainQueue().isCurrent())
-//            self.contextValue = context
-//            if let context = self.contextValue {
-//                context.applyBackground()
-//                self.window.contentView?.addSubview(context.rootView, positioned: .below, relativeTo: self.window.contentView?.subviews.first)
-//                if !self.window.isKeyWindow {
-//                    self.window.makeKeyAndOrderFront(self)
-//                }
-//                self.window.deminiaturize(self)
-//                NSApp.activate(ignoringOtherApps: true)
-//            }
-//        })
+        self.window.makeKeyAndOrderFront(nil)
+        self.window.titleVisibility = .hidden
+        self.window.titlebarAppearsTransparent = true
+        let toolBarController = ToolBarViewController()
+        self.window.contentViewController = toolBarController
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -219,7 +219,8 @@ open class View : NSView, CALayerDelegate, AppearanceViewProtocol {
 
     
     public init() {
-        super.init(frame: NSZeroRect)
+//        super.init(frame: NSZeroRect)
+        super.init(frame: .zero)
         assertOnMainThread()
         self.wantsLayer = true
         acceptsTouchEvents = true

@@ -15,8 +15,8 @@ class MainWindowController: NSWindowController {
         
         window?.titlebarAppearsTransparent = true
         window?.titleVisibility = .hidden
-        
-        
+        window?.setFrame(NSMakeRect(0, 0, 800, 650), display: true)
+        window?.center()
     }
 
 }
