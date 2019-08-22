@@ -11,6 +11,7 @@ import Cocoa
 protocol ModalViewDelegate: class {
     func dismissModal()
     func actionCreateAccount()
+    func actionModalCreateAccount()
 }
 
 class ModalLogin: NSView {
@@ -67,7 +68,7 @@ class ModalLogin: NSView {
         guard let delegate = delegate else {
             return
         }
-        delegate.actionCreateAccount()
+        delegate.actionModalCreateAccount()
     }
     
 }

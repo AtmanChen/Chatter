@@ -19,13 +19,10 @@ class ChatViewController: ViewController {
         readyOnce()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        topContainerView.backgroundColor = .white
-    }
-    
     override func loadView() {
         super.loadView()
-        addSubview(topContainerView)
+        backgroundColor = nightBluePalette.grayForeground
     }
+    
+    
 }

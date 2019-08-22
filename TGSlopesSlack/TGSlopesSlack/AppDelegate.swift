@@ -7,36 +7,32 @@
 //
 
 import Cocoa
+import TGUIKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    lazy var window: NSWindow = {
-        let w = NSWindow(contentRect: NSMakeRect(0, 0, 640, 480),
-                         styleMask: [.titled, .resizable, .miniaturizable, .closable, .fullSizeContentView],
-                         backing: .buffered,
-                         defer: false)
-        
-        // 设置最小尺寸
-        w.minSize = NSMakeSize(320, 240)
-        
-        // 打开显示在屏幕的中心位置
-        w.center()
-        
-        return w
-    }()
-
+    
+    @IBOutlet weak var window: Window!
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         UserDefaults.standard.set(true, forKey: "NSConstraintBasedLayoutVisualizeMutuallyExclusiveConstraints")
         launchInterface()
     }
     
     private func launchInterface() {
-        self.window.makeKeyAndOrderFront(nil)
-        self.window.titleVisibility = .hidden
-        self.window.titlebarAppearsTransparent = true
-        let toolBarController = ToolBarViewController()
-        self.window.contentViewController = toolBarController
+        window.maxSize = NSMakeSize(.greatestFiniteMagnitude, .greatestFiniteMagnitude)
+        window.minSize = NSMakeSize(800, 500)
+        window.setFrame(NSMakeRect(0, 0, 800, 650), display: true)
+        window.center()
+        
+        let rootView = ToolBarView(frame: window.bounds)
+        if !window.isKeyWindow {
+            window.makeKeyAndOrderFront(self)
+        }
+        window.contentView?.addSubview(rootView, positioned: .below, relativeTo: window.contentView?.subviews.first)
+        window.deminiaturize(self)
+        NSApp.activate(ignoringOtherApps: true)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

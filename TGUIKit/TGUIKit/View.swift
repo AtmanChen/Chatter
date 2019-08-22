@@ -71,7 +71,7 @@ public struct BorderType: OptionSet {
 }
 
 public protocol ViewDisplayDelegate : class {
-    func draw(_ layer: CALayer, in ctx: CGContext);
+    func draw(_ layer: CALayer, in ctx: CGContext)
 }
 
 public class CustomViewHandlers {

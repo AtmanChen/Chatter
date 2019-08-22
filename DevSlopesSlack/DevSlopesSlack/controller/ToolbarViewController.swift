@@ -96,6 +96,7 @@ class ToolbarViewController: NSViewController {
             (modalView as! ModalLogin).delegate = self
         case .createAccount:
             modalView = ModalCreateAccount()
+            (modalView as! ModalCreateAccount).delegate = self
         }
         modalView.wantsLayer = true
         modalView.translatesAutoresizingMaskIntoConstraints = false
@@ -118,6 +119,10 @@ extension ToolbarViewController: ModalViewDelegate {
     }
     
     func actionCreateAccount() {
+        print("Create Account Button Pressed")
+    }
+    
+    func actionModalCreateAccount() {
         modal(.createAccount)
     }
     

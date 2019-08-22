@@ -10,7 +10,7 @@ import Cocoa
 
 class MainWindowController: NSWindowController {
     
-    private let toolBarController = ToolBarViewController()
+    
 
     override func windowDidLoad() {
         super.windowDidLoad()

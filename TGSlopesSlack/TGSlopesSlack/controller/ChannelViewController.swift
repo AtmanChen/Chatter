@@ -9,10 +9,20 @@
 import Cocoa
 import TGUIKit
 
-class ChannelViewController: NSViewController {
+class ChannelViewController: ViewController {
+    
+    override init() {
+        super.init()
+        readyOnce()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+    }
+    
+    override func loadView() {
+        super.loadView()
+        backgroundColor = nightBluePalette.blueUI
     }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,8 @@
 		2B269850230BD50700CDE3AC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26984F230BD50700CDE3AC /* ChatViewController.swift */; };
 		2B26985A230BD7E100CDE3AC /* SlackCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B269859230BD7E100CDE3AC /* SlackCore.framework */; };
 		2B26987E230D341C00CDE3AC /* ProfileLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26987D230D341C00CDE3AC /* ProfileLoginView.swift */; };
+		2B32945E230E629C008BA0E0 /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B32945D230E629C008BA0E0 /* ControllerExtension.swift */; };
+		2B329460230E6456008BA0E0 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B32945F230E6456008BA0E0 /* ApplicationContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		2B26984F230BD50700CDE3AC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		2B269859230BD7E100CDE3AC /* SlackCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlackCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B26987D230D341C00CDE3AC /* ProfileLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginView.swift; sourceTree = "<group>"; };
+		2B32945D230E629C008BA0E0 /* ControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerExtension.swift; sourceTree = "<group>"; };
+		2B32945F230E6456008BA0E0 /* ApplicationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		4FBACDB67532C097DDFFD707 /* Pods-TGSlopesSlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGSlopesSlack.release.xcconfig"; path = "Target Support Files/Pods-TGSlopesSlack/Pods-TGSlopesSlack.release.xcconfig"; sourceTree = "<group>"; };
 		55853F1268380F1475967514 /* Pods-TGSlopesSlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGSlopesSlack.debug.xcconfig"; path = "Target Support Files/Pods-TGSlopesSlack/Pods-TGSlopesSlack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,10 +81,12 @@
 		2B269828230BC7F300CDE3AC /* TGSlopesSlack */ = {
 			isa = PBXGroup;
 			children = (
+				2B32945C230E4E75008BA0E0 /* parent-controllers */,
 				2B269851230BD68E00CDE3AC /* view */,
 				2B26984A230BCEB800CDE3AC /* context */,
 				2B269837230BC82000CDE3AC /* controller */,
 				2B269829230BC7F300CDE3AC /* AppDelegate.swift */,
+				2B32945F230E6456008BA0E0 /* ApplicationContext.swift */,
 				2B26982B230BC7F400CDE3AC /* Assets.xcassets */,
 				2B26982D230BC7F400CDE3AC /* MainMenu.xib */,
 				2B269830230BC7F400CDE3AC /* Info.plist */,
@@ -124,6 +130,14 @@
 				2B26987D230D341C00CDE3AC /* ProfileLoginView.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		2B32945C230E4E75008BA0E0 /* parent-controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2B32945D230E629C008BA0E0 /* ControllerExtension.swift */,
+			);
+			path = "parent-controllers";
 			sourceTree = "<group>";
 		};
 		E1708C67764ABE4037E4CFA8 /* Pods */ = {
@@ -254,8 +268,10 @@
 				2B26983A230BC83200CDE3AC /* MainWindowController.swift in Sources */,
 				2B26982A230BC7F300CDE3AC /* AppDelegate.swift in Sources */,
 				2B269850230BD50700CDE3AC /* ChatViewController.swift in Sources */,
+				2B329460230E6456008BA0E0 /* ApplicationContext.swift in Sources */,
 				2B26987E230D341C00CDE3AC /* ProfileLoginView.swift in Sources */,
 				2B26984E230BD4F200CDE3AC /* ChannelViewController.swift in Sources */,
+				2B32945E230E629C008BA0E0 /* ControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
