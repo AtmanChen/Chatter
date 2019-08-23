@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		090C3C58883E5D94A69DF7F0 /* Pods_TGSlopesSlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E62F6394F8F79A16D2C219 /* Pods_TGSlopesSlack.framework */; };
 		2B02869E230E9DDF00141C97 /* system.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02869D230E9DDF00141C97 /* system.swift */; };
+		2B0287C0230FC66C00141C97 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0287BF230FC66C00141C97 /* SignInViewController.swift */; };
 		2B26982A230BC7F300CDE3AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B269829230BC7F300CDE3AC /* AppDelegate.swift */; };
 		2B26982C230BC7F400CDE3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B26982B230BC7F400CDE3AC /* Assets.xcassets */; };
 		2B26982F230BC7F400CDE3AC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B26982D230BC7F400CDE3AC /* MainMenu.xib */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		07E62F6394F8F79A16D2C219 /* Pods_TGSlopesSlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TGSlopesSlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B02869D230E9DDF00141C97 /* system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = system.swift; sourceTree = "<group>"; };
+		2B0287BF230FC66C00141C97 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2B269826230BC7F300CDE3AC /* TGSlopesSlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGSlopesSlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B269829230BC7F300CDE3AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B26982B230BC7F400CDE3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				2B26987D230D341C00CDE3AC /* ProfileLoginViewController.swift */,
+				2B0287BF230FC66C00141C97 /* SignInViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				2B26982A230BC7F300CDE3AC /* AppDelegate.swift in Sources */,
 				2B269850230BD50700CDE3AC /* ChatViewController.swift in Sources */,
 				2B02869E230E9DDF00141C97 /* system.swift in Sources */,
+				2B0287C0230FC66C00141C97 /* SignInViewController.swift in Sources */,
 				2B26987E230D341C00CDE3AC /* ProfileLoginViewController.swift in Sources */,
 				2B26984E230BD4F200CDE3AC /* ChannelViewController.swift in Sources */,
 				2B32945E230E629C008BA0E0 /* ControllerExtension.swift in Sources */,

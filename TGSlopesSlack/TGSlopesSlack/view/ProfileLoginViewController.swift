@@ -10,18 +10,32 @@ import TGUIKit
 import SnapKit
 
 
+final class ProfileLoginModalController: ModalController {
+    
+    public override var modalHeader: (left: ModalHeaderData?, center: ModalHeaderData?, right: ModalHeaderData?)? {
+        return (left: nil, center: ModalHeaderData(title: "Log In"), right: nil)
+    }
+    
+}
+
+
 final class ProfileLoginView: View {
     
     private let title = TextView()
     private let emailTF = NSTextField()
     private let passwordTF = NSSecureTextField()
     private let signInButton = TitleButton()
-    private let createAccountButton = TextView()
+    fileprivate let createAccountButton = TextView()
+    
+    deinit {
+        var bp:Int = 0
+        bp += 1
+    }
     
     required init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         
-        let titleLayout = TextViewLayout(.initialize(string: "Sign In", color: nightBluePalette.text, font: .bold(.huge)))
+        let titleLayout = TextViewLayout(.initialize(string: "Log In", color: nightBluePalette.text, font: .bold(.huge)))
         titleLayout.measure(width: .greatestFiniteMagnitude)
         title.update(titleLayout)
         
@@ -61,7 +75,7 @@ final class ProfileLoginView: View {
         createAccountButton.update(createAccountLayout)
         
         
-        addSubview(title)
+//        addSubview(title)
         addSubview(emailTF)
         addSubview(passwordTF)
         addSubview(signInButton)
@@ -77,8 +91,8 @@ final class ProfileLoginView: View {
         super.layout()
         emailTF.sizeToFit()
         passwordTF.sizeToFit()
-        title.centerX(y: 20)
-        emailTF.setFrameOrigin(NSPoint(x: self.bounds.width / 2 - 100, y: title.frame.maxY + 20))
+//        title.centerX(y: 20)
+        emailTF.setFrameOrigin(NSPoint(x: self.bounds.width / 2 - 100, y: 20))
         emailTF.setFrameSize(200, 22)
         passwordTF.setFrameOrigin(NSPoint(x: self.bounds.width / 2 - 100, y: emailTF.frame.maxY + 16))
         passwordTF.setFrameSize(200, 22)
@@ -104,10 +118,22 @@ final class ProfileLoginViewController: GenericViewController<ProfileLoginView> 
     override init() {
         super.init()
         readyOnce()
-        bar = .init(height: 0)
+        bar = .init(height: 44)
     }
     
     override func returnKeyAction() -> KeyHandlerResult {
         return .invokeNext
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        genericView.backgroundColor = nightBluePalette.background
+        genericView.createAccountButton.set(handler: { _ in
+            let signInViewController = SignInViewController()
+            self.navigationController?.push(signInViewController, true, style: .push)
+        }, for: .Click)
+    }
+    
+    
+    
 }

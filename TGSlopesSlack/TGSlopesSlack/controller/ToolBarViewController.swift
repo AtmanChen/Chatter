@@ -119,9 +119,10 @@ final class ToolBarView: View, SplitViewDelegate {
     @objc
     private func openSignIn() {
         let loginNavi = NavigationViewController(ProfileLoginViewController(), mainWindow)
-        loginNavi._frameRect = NSRect(x: 0, y: 0, width: 475, height: 300)
+        loginNavi._frameRect = NSRect(x: 0, y: 0, width: 500, height: 300)
         loginNavi.readyOnce()
-        showModal(with: loginNavi, for: mainWindow)
+        let loginModalController = ProfileLoginModalController(loginNavi)
+        showModal(with: loginModalController, for: mainWindow)
     }
 }
 
