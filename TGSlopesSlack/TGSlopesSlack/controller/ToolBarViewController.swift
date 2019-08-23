@@ -17,7 +17,7 @@ final class ToolBarView: View, SplitViewDelegate {
     private let leftController = ChannelViewController()
     private let rightController = ChatViewController()
     private let profileImageView = ImageView()
-    private let profileTitleLabel = TextView()
+    private let profileTitleButton = TitleButton()
     
      required init(frame frameRect: NSRect) {
         splitView = SplitView(frame: .zero)
@@ -30,15 +30,24 @@ final class ToolBarView: View, SplitViewDelegate {
         splitView.state = .dual
         splitView.needFullsize()
         
-        let profileTitleLayout = TextViewLayout(.initialize(string: "Log in", color: .white, font: .medium(13)))
-        profileTitleLayout.measure(width: .greatestFiniteMagnitude)
-        profileTitleLabel.update(profileTitleLayout)
-        topContainerView.addSubview(profileTitleLabel)
+        profileTitleButton.set(text: "Log in", for: .Normal)
+        profileTitleButton.style = ControlStyle(font: .medium(13), foregroundColor: .white)
+        _ = profileTitleButton.sizeToFit()
+        profileTitleButton.set(handler: { [weak self] _ in
+            guard let self = self else {
+                return
+            }
+            self.openSignIn()
+        }, for: .Click)
+        topContainerView.addSubview(profileTitleButton)
+        
+        profileImageView.image = #imageLiteral(resourceName: "profileDefault").precomposed(.white)
+        topContainerView.addSubview(profileImageView)
         topContainerView.backgroundColor = nightBluePalette.background
         addSubview(topContainerView)
         addSubview(splitView)
         
-        NotificationCenter.default.addObserver(self, selector:  #selector(viewFrameChanged(_:)), name: NSView.frameDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(viewFrameChanged(_:)), name: NSView.frameDidChangeNotification, object: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -89,13 +98,13 @@ final class ToolBarView: View, SplitViewDelegate {
     
     override func layout() {
         super.layout()
-        self.topContainerView.setFrameOrigin(.zero)
+        self.topContainerView.setFrameOrigin(NSPoint(x: 0, y: 20))
         self.topContainerView.setFrameSize(NSSize(width: self.bounds.width, height: 60))
-        self.profileTitleLabel.setFrameOrigin(self.bounds.width - 20 - self.profileTitleLabel.frame.width, 30 - self.profileTitleLabel.frame.height / 2)
-        splitView.setFrameOrigin(0, 60)
-        splitView.setFrameSize(NSSize(width: self.bounds.width, height: self.bounds.height - 60))
-        topContainerView.layout()
-        splitView.layout()
+        self.profileTitleButton.centerY(x: self.bounds.width - 20 - self.profileTitleButton.frame.width)
+        self.profileImageView.centerY(x: profileTitleButton.frame.minX - 24 - 2)
+        self.profileImageView.setFrameSize(NSSize(width: 24, height: 24))
+        splitView.setFrameOrigin(0, self.topContainerView.frame.maxY)
+        splitView.setFrameSize(NSSize(width: self.bounds.width, height: self.bounds.height - self.topContainerView.frame.maxY))
     }
     
     @objc
@@ -105,6 +114,14 @@ final class ToolBarView: View, SplitViewDelegate {
         }
         setFrameSize(window.frame.size)
         layout()
+    }
+    
+    @objc
+    private func openSignIn() {
+        let loginNavi = NavigationViewController(ProfileLoginViewController(), mainWindow)
+        loginNavi._frameRect = NSRect(x: 0, y: 0, width: 475, height: 300)
+        loginNavi.readyOnce()
+        showModal(with: loginNavi, for: mainWindow)
     }
 }
 

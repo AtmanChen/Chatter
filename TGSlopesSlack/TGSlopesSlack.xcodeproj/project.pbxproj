@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		090C3C58883E5D94A69DF7F0 /* Pods_TGSlopesSlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E62F6394F8F79A16D2C219 /* Pods_TGSlopesSlack.framework */; };
+		2B02869E230E9DDF00141C97 /* system.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02869D230E9DDF00141C97 /* system.swift */; };
 		2B26982A230BC7F300CDE3AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B269829230BC7F300CDE3AC /* AppDelegate.swift */; };
 		2B26982C230BC7F400CDE3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B26982B230BC7F400CDE3AC /* Assets.xcassets */; };
 		2B26982F230BC7F400CDE3AC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B26982D230BC7F400CDE3AC /* MainMenu.xib */; };
@@ -18,13 +19,13 @@
 		2B26984E230BD4F200CDE3AC /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26984D230BD4F200CDE3AC /* ChannelViewController.swift */; };
 		2B269850230BD50700CDE3AC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26984F230BD50700CDE3AC /* ChatViewController.swift */; };
 		2B26985A230BD7E100CDE3AC /* SlackCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B269859230BD7E100CDE3AC /* SlackCore.framework */; };
-		2B26987E230D341C00CDE3AC /* ProfileLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26987D230D341C00CDE3AC /* ProfileLoginView.swift */; };
+		2B26987E230D341C00CDE3AC /* ProfileLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26987D230D341C00CDE3AC /* ProfileLoginViewController.swift */; };
 		2B32945E230E629C008BA0E0 /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B32945D230E629C008BA0E0 /* ControllerExtension.swift */; };
-		2B329460230E6456008BA0E0 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B32945F230E6456008BA0E0 /* ApplicationContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07E62F6394F8F79A16D2C219 /* Pods_TGSlopesSlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TGSlopesSlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B02869D230E9DDF00141C97 /* system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = system.swift; sourceTree = "<group>"; };
 		2B269826230BC7F300CDE3AC /* TGSlopesSlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TGSlopesSlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B269829230BC7F300CDE3AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B26982B230BC7F400CDE3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,9 +39,8 @@
 		2B26984D230BD4F200CDE3AC /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		2B26984F230BD50700CDE3AC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		2B269859230BD7E100CDE3AC /* SlackCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SlackCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B26987D230D341C00CDE3AC /* ProfileLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginView.swift; sourceTree = "<group>"; };
+		2B26987D230D341C00CDE3AC /* ProfileLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginViewController.swift; sourceTree = "<group>"; };
 		2B32945D230E629C008BA0E0 /* ControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerExtension.swift; sourceTree = "<group>"; };
-		2B32945F230E6456008BA0E0 /* ApplicationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		4FBACDB67532C097DDFFD707 /* Pods-TGSlopesSlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGSlopesSlack.release.xcconfig"; path = "Target Support Files/Pods-TGSlopesSlack/Pods-TGSlopesSlack.release.xcconfig"; sourceTree = "<group>"; };
 		55853F1268380F1475967514 /* Pods-TGSlopesSlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TGSlopesSlack.debug.xcconfig"; path = "Target Support Files/Pods-TGSlopesSlack/Pods-TGSlopesSlack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B02869C230E9DD000141C97 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B02869D230E9DDF00141C97 /* system.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		2B26981D230BC7F300CDE3AC = {
 			isa = PBXGroup;
 			children = (
@@ -81,12 +89,12 @@
 		2B269828230BC7F300CDE3AC /* TGSlopesSlack */ = {
 			isa = PBXGroup;
 			children = (
+				2B02869C230E9DD000141C97 /* utils */,
 				2B32945C230E4E75008BA0E0 /* parent-controllers */,
 				2B269851230BD68E00CDE3AC /* view */,
 				2B26984A230BCEB800CDE3AC /* context */,
 				2B269837230BC82000CDE3AC /* controller */,
 				2B269829230BC7F300CDE3AC /* AppDelegate.swift */,
-				2B32945F230E6456008BA0E0 /* ApplicationContext.swift */,
 				2B26982B230BC7F400CDE3AC /* Assets.xcassets */,
 				2B26982D230BC7F400CDE3AC /* MainMenu.xib */,
 				2B269830230BC7F400CDE3AC /* Info.plist */,
@@ -127,7 +135,7 @@
 		2B269851230BD68E00CDE3AC /* view */ = {
 			isa = PBXGroup;
 			children = (
-				2B26987D230D341C00CDE3AC /* ProfileLoginView.swift */,
+				2B26987D230D341C00CDE3AC /* ProfileLoginViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -268,8 +276,8 @@
 				2B26983A230BC83200CDE3AC /* MainWindowController.swift in Sources */,
 				2B26982A230BC7F300CDE3AC /* AppDelegate.swift in Sources */,
 				2B269850230BD50700CDE3AC /* ChatViewController.swift in Sources */,
-				2B329460230E6456008BA0E0 /* ApplicationContext.swift in Sources */,
-				2B26987E230D341C00CDE3AC /* ProfileLoginView.swift in Sources */,
+				2B02869E230E9DDF00141C97 /* system.swift in Sources */,
+				2B26987E230D341C00CDE3AC /* ProfileLoginViewController.swift in Sources */,
 				2B26984E230BD4F200CDE3AC /* ChannelViewController.swift in Sources */,
 				2B32945E230E629C008BA0E0 /* ControllerExtension.swift in Sources */,
 			);

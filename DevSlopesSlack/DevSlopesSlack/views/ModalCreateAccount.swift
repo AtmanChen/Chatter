@@ -11,6 +11,7 @@ import TGUIKit
 
 class ModalCreateAccount: NSView {
     
+    @IBOutlet weak var stackView: NSStackView!
     @IBOutlet var view: NSView!
     @IBOutlet weak var nameTF: NSTextField!
     @IBOutlet weak var emailTF: NSTextField!
@@ -53,6 +54,11 @@ class ModalCreateAccount: NSView {
         chooseAvatarButton.wantsLayer = true
         chooseAvatarButton.layer?.cornerRadius = 7
         chooseAvatarButton.layer?.backgroundColor = GeneralColor.green.cgColor
+        
+        avatarImageView.layer?.cornerRadius = 10
+        avatarImageView.layer?.borderColor = NSColor.gray.cgColor
+        avatarImageView.layer?.borderWidth = 3
+        
     }
     
     @IBAction func actionCloseCreateAccountModal(_ sender: Any) {

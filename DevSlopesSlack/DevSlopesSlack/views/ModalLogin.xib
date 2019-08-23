@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14810.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <stackView distribution="fillProportionally" orientation="vertical" alignment="centerX" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cV4-kr-6TP">
-                    <rect key="frame" x="140" y="63" width="200" height="147"/>
+                    <rect key="frame" x="140" y="60" width="200" height="153"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yaT-Sm-eAU">
-                            <rect key="frame" x="68" y="122" width="65" height="25"/>
+                            <rect key="frame" x="68" y="122" width="65" height="31"/>
                             <textFieldCell key="cell" lineBreakMode="clipping" title="Sign In" id="owl-ZK-B0n">
                                 <font key="font" size="18" name="AvenirNext-Bold"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -121,7 +120,7 @@
                     </customSpacing>
                 </stackView>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="brU-1P-aUK">
-                    <rect key="frame" x="183" y="20" width="115" height="16"/>
+                    <rect key="frame" x="183" y="20" width="115" height="17"/>
                     <buttonCell key="cell" type="bevel" title="Create an account" bezelStyle="rounded" alignment="center" imageScaling="proportionallyDown" inset="2" id="5ZC-O4-lad">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -131,10 +130,10 @@
                     </connections>
                 </button>
                 <button translatesAutoresizingMaskIntoConstraints="NO" id="cyl-Pi-j1a">
-                    <rect key="frame" x="432" y="224" width="28" height="28"/>
+                    <rect key="frame" x="436" y="228" width="24" height="24"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="28" id="2oZ-t3-WVN"/>
-                        <constraint firstAttribute="height" constant="28" id="cky-YR-9EA"/>
+                        <constraint firstAttribute="width" constant="24" id="2oZ-t3-WVN"/>
+                        <constraint firstAttribute="height" constant="24" id="cky-YR-9EA"/>
                     </constraints>
                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="mac-loginClose" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="35C-gq-7SD">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

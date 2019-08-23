@@ -23,6 +23,6 @@ class ChannelViewController: ViewController {
     
     override func loadView() {
         super.loadView()
-        backgroundColor = nightBluePalette.blueUI
+        backgroundColor = nightBluePalette.background
     }
 }

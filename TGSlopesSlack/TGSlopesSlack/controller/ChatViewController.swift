@@ -21,7 +21,7 @@ class ChatViewController: ViewController {
     
     override func loadView() {
         super.loadView()
-        backgroundColor = nightBluePalette.grayForeground
+        backgroundColor = nightBluePalette.background
     }
     
     

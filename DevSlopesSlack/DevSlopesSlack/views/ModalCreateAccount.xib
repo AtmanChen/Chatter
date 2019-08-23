@@ -13,6 +13,7 @@
                 <outlet property="emailTF" destination="pLA-F7-ELM" id="VNL-Th-D9j"/>
                 <outlet property="nameTF" destination="Vbf-Jm-BvK" id="Ccb-Wk-E7l"/>
                 <outlet property="passwordTF" destination="XbL-aQ-Xg7" id="EWd-kj-B1l"/>
+                <outlet property="stackView" destination="koM-7d-SQF" id="mIk-hX-Hs6"/>
                 <outlet property="view" destination="c22-O7-iKe" id="RGN-Mw-VJV"/>
             </connections>
         </customObject>
@@ -201,7 +202,7 @@
                         <real value="3.4028234663852886e+38"/>
                     </customSpacing>
                 </stackView>
-                <button translatesAutoresizingMaskIntoConstraints="NO" id="Mmw-bJ-sOE">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="Mmw-bJ-sOE" userLabel="Close">
                     <rect key="frame" x="436" y="236" width="24" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="24" id="Bd1-SM-8PT"/>
@@ -215,13 +216,21 @@
                         <action selector="actionCloseCreateAccountModal:" target="-2" id="n11-bo-4Ie"/>
                     </connections>
                 </button>
+                <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="Law-sD-7jR">
+                    <rect key="frame" x="342" y="29" width="67" height="19"/>
+                    <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </colorWell>
             </subviews>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Law-sD-7jR" secondAttribute="trailing" constant="71" id="2Ej-NN-Vgd"/>
                 <constraint firstAttribute="bottom" secondItem="koM-7d-SQF" secondAttribute="bottom" constant="60" id="6Cx-0p-bgD"/>
+                <constraint firstAttribute="bottom" secondItem="Law-sD-7jR" secondAttribute="bottom" constant="29" id="6vx-dY-4Zk"/>
+                <constraint firstItem="Law-sD-7jR" firstAttribute="top" secondItem="PDu-yD-O9z" secondAttribute="bottom" constant="12" id="G9h-VA-hbC"/>
                 <constraint firstItem="W9G-qh-2FG" firstAttribute="bottom" secondItem="Mmw-bJ-sOE" secondAttribute="bottom" id="JpA-W2-sJ9"/>
                 <constraint firstItem="koM-7d-SQF" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="MTx-cv-uiq"/>
                 <constraint firstItem="W9G-qh-2FG" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="Nwf-vq-TZr"/>
                 <constraint firstItem="koM-7d-SQF" firstAttribute="top" secondItem="W9G-qh-2FG" secondAttribute="bottom" constant="20" id="Oid-cB-DGK"/>
+                <constraint firstItem="Law-sD-7jR" firstAttribute="centerX" secondItem="PDu-yD-O9z" secondAttribute="centerX" id="Tl9-gJ-SHF"/>
                 <constraint firstAttribute="trailing" secondItem="Mmw-bJ-sOE" secondAttribute="trailing" constant="20" id="Y2w-1s-Cam"/>
                 <constraint firstItem="Mmw-bJ-sOE" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="w98-EX-Ojv"/>
             </constraints>

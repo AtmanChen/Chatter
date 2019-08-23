@@ -25,13 +25,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.minSize = NSMakeSize(800, 500)
         window.setFrame(NSMakeRect(0, 0, 800, 650), display: true)
         window.center()
-        
+        mw = window
         let rootView = ToolBarView(frame: window.bounds)
         if !window.isKeyWindow {
             window.makeKeyAndOrderFront(self)
         }
         window.contentView?.addSubview(rootView, positioned: .below, relativeTo: window.contentView?.subviews.first)
-        window.deminiaturize(self)
+        window.titleVisibility = .hidden
+        window.titlebarAppearsTransparent = true
         NSApp.activate(ignoringOtherApps: true)
     }
 
