@@ -16,6 +16,7 @@ final class SignInView: View {
     private let emailTF = NSTextField()
     private let passwordTF = NSSecureTextField()
     private let leftContainerView = View()
+    private let rightContainerView = View()
     private let avatarImageView = ImageView()
     private let createAccountButton = TitleButton()
     private let chooseAvatarButton = TitleButton()
@@ -64,7 +65,6 @@ final class SignInView: View {
         createAccountButton.style = ControlStyle(font: .normal(.title), foregroundColor: .white, backgroundColor: nightBluePalette.blueUI, highlightColor: .white)
         createAccountButton.set(text: "Create Account", for: .Normal)
         _ = createAccountButton.sizeToFit()
-        createAccountButton.setFrameSize(NSSize(width: 76, height: 36))
         createAccountButton.layer?.cornerRadius = 18
         createAccountButton.set(handler: { _ in
             print("Log In Clicked")
@@ -74,8 +74,24 @@ final class SignInView: View {
         leftContainerView.addSubview(emailTF)
         leftContainerView.addSubview(passwordTF)
         leftContainerView.addSubview(createAccountButton)
-    
+        
+        avatarImageView.image = #imageLiteral(resourceName: "profileDefault").precomposed()
+        avatarImageView.layer?.borderColor = nightBluePalette.grayUI.cgColor
+        avatarImageView.layer?.borderWidth = 3
+        avatarImageView.sizeToFit()
+        rightContainerView.addSubview(avatarImageView)
+        
+        chooseAvatarButton.style = ControlStyle(font: .normal(.title), foregroundColor: .white, backgroundColor: nightBluePalette.blueUI, highlightColor: .white)
+        chooseAvatarButton.set(text: "Choose Avatar", for: .Normal)
+        _ = chooseAvatarButton.sizeToFit()
+        chooseAvatarButton.layer?.cornerRadius = 18
+        chooseAvatarButton.set(handler: { _ in
+            print("Choose Avatar")
+        }, for: .Click)
+        rightContainerView.addSubview(chooseAvatarButton)
+        
         addSubview(leftContainerView)
+        addSubview(rightContainerView)
     }
     
     required init?(coder: NSCoder) {
@@ -87,8 +103,40 @@ final class SignInView: View {
         nameTF.sizeToFit()
         emailTF.sizeToFit()
         passwordTF.sizeToFit()
+        
+        leftContainerView.setFrameSize(NSSize(width: 200, height: 142))
+        leftContainerView.setFrameOrigin(NSPoint(x: 42, y: 28))
+        
+        rightContainerView.setFrameSize(NSSize(width: 125, height: 142))
+        rightContainerView.setFrameOrigin(NSPoint(x: bounds.width - 42 - 125, y: 28))
+        
+        let tfSize = NSSize(width: 200, height: 22)
+        nameTF.setFrameOrigin(.zero)
+        nameTF.setFrameSize(tfSize)
+        emailTF.setFrameOrigin(NSPoint(x: 0, y: nameTF.frame.maxY + 14))
+        emailTF.setFrameSize(tfSize)
+        passwordTF.setFrameOrigin(NSPoint(x: 0, y: emailTF.frame.maxY + 14))
+        passwordTF.setFrameSize(tfSize)
+        createAccountButton.centerX(y: leftContainerView.bounds.height - 36)
+        createAccountButton.setFrameSize(NSSize(width: 125, height: 36))
+        
+        avatarImageView.centerX(y: 0)
+        avatarImageView.setFrameSize(NSSize(width: 100, height: 100))
+    
+        chooseAvatarButton.setFrameSize(NSSize(width: 125, height: 36))
+        chooseAvatarButton.centerX(y: rightContainerView.bounds.height - 36)
     }
     
+    override func draw(_ layer: CALayer, in ctx: CGContext) {
+        super.draw(layer, in: ctx)
+        ctx.setFillColor(nightBluePalette.border.cgColor)
+        let nameFrameOnRoot = nameTF.convert(nameTF.bounds, to: self)
+        ctx.fill(NSRect(x: 42, y: nameFrameOnRoot.maxY, width: 200, height: .borderSize))
+        let emailFrameOnRoot = emailTF.convert(emailTF.bounds, to: self)
+        ctx.fill(NSRect(x: 42, y: emailFrameOnRoot.maxY, width: 200, height: .borderSize))
+        let passwordFrameOnRoot = passwordTF.convert(passwordTF.bounds, to: self)
+        ctx.fill(NSRect(x: 42, y: passwordFrameOnRoot.maxY, width: 200, height: .borderSize))
+    }
 }
 
 final class SignInViewController: GenericViewController<SignInView> {
@@ -101,7 +149,6 @@ final class SignInViewController: GenericViewController<SignInView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        centerBarView.text = .initialize(string: "Sign In", color: nightBluePalette.text, font: .medium(.huge))
         genericView.backgroundColor = nightBluePalette.background
     }
     
@@ -120,7 +167,7 @@ final class SignInViewController: GenericViewController<SignInView> {
     }
     
     override var defaultBarTitle: String {
-        return "Sign In"
+        return "Create Account"
     }
 }
 

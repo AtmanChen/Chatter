@@ -12,10 +12,6 @@ import SnapKit
 
 final class ProfileLoginModalController: ModalController {
     
-    public override var modalHeader: (left: ModalHeaderData?, center: ModalHeaderData?, right: ModalHeaderData?)? {
-        return (left: nil, center: ModalHeaderData(title: "Log In"), right: nil)
-    }
-    
 }
 
 
@@ -92,12 +88,12 @@ final class ProfileLoginView: View {
         emailTF.sizeToFit()
         passwordTF.sizeToFit()
 //        title.centerX(y: 20)
-        emailTF.setFrameOrigin(NSPoint(x: self.bounds.width / 2 - 100, y: 20))
+        emailTF.setFrameOrigin(NSPoint(x: self.bounds.width / 2 - 100, y: 40))
         emailTF.setFrameSize(200, 22)
         passwordTF.setFrameOrigin(NSPoint(x: self.bounds.width / 2 - 100, y: emailTF.frame.maxY + 16))
         passwordTF.setFrameSize(200, 22)
-        signInButton.setFrameOrigin(NSPoint(x: self.bounds.width / 2 - 38, y: passwordTF.frame.maxY + 28))
-        createAccountButton.centerX(y: signInButton.frame.maxY + 20)
+        signInButton.setFrameOrigin(NSPoint(x: self.bounds.width / 2 - 38, y: passwordTF.frame.maxY + 16))
+        createAccountButton.centerX(y: signInButton.frame.maxY + 16)
     }
     
     override func draw(_ layer: CALayer, in ctx: CGContext) {
@@ -134,6 +130,7 @@ final class ProfileLoginViewController: GenericViewController<ProfileLoginView> 
         }, for: .Click)
     }
     
-    
-    
+    override var defaultBarTitle: String {
+        return "Sign In"
+    }
 }
